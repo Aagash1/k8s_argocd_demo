@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s_app_demo
+  labels:
+    app: k8s_app_demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: k8s_app_demo
+  template:
+    metadata:
+      labels:
+        app: k8s_app_demo
+    spec:
+      containers:
+        - name: k8s_app_demo
+          image: Aagash1/k8s_app_demo:9d001e6e
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
+
+ 
