@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8s_app_demo
+  name: k8s-app-demo
   labels:
-    app: k8s_app_demo
+    app: k8s-app-demo
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: k8s_app_demo
+      app: k8s-app-demo
   template:
     metadata:
       labels:
-        app: k8s_app_demo
+        app: k8s-app-demo
     spec:
       containers:
-        - name: k8s_app_demo
+        - name: k8s-app-demo
           image: Aagash1/k8s_app_demo:11c4f8dd
           ports:
             - containerPort: 80
