@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: k8s_app_demo
-          image: Aagash1/k8s_app_demo:9d001e6e
+          image: Aagash1/k8s_app_demo:11c4f8dd
           ports:
             - containerPort: 80
           resources:
